@@ -19,10 +19,10 @@ delta = []
 grid_pattern = []
 
 imax = 1000
-itran = 100
+itran = 300
 
-ratio1 = 0.1
-ratio2 = 0.001
+ratio1 = 0.2
+ratio2 = 0.1 #0.001 is default
 
 f1 = ratio1**(1/(itran-2))
 f2 = ratio2**(1/(imax-itran-1))
@@ -40,7 +40,7 @@ grid_pattern.append(0.0)
 for l in range(0,imax-1):
     grid_pattern.append(grid_pattern[l]+delta[l])
 
-print "grid pattern consists of", len(grid_pattern), "points"
+print("grid pattern consists of", len(grid_pattern), "points")
 
 outfile = open("GridPattern_new.dat","w")
 for l in range(0,imax):
